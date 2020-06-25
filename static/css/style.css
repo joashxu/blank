@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: 'liga', 'kern';
+    font-stretch: normal;
+    -webkit-font-kerning: auto;
+    font-kerning: auto;
+    -webkit-font-smoothing: antialiased!important;
+    /*text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);*/
+    vertical-align: baseline;
+}
+
+
+body {
+    font-family: georgia, times,serif;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    color: #333;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+    width: 100%;
+    margin: 20px 5px;
+    height: auto;
+}
+
+code, code > span {
+    font-family: 'Source Code Pro', monospace;
+}
+
+a {
+    color: #326891;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 0.75rem;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    max-width: 600px;
+}
+
+dl, ul, ol {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+
+
+.post-info {
+    width: auto;
+    margin-left: 0;
+    display: inline-block;
+
+    font-family: "Muli", helvetica,arial,sans-serif;
+    font-weight: 500;
+    color: #777;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+}
+
+/* Typography */
+.san-serif { font-family: "Muli" }
+h1 {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: "Muli";
+}
+
+/* Table */
+table {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    border-spacing: 0;
+}
+
+table thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+table tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+table td, table th {
+    padding: .5rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: 1.0625rem;
+}
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+}
+
+#layout.active #menu {
+    left: 250px;
+    width: 250px;
+}
+
+#layout.active .menu-link {
+    left: 250px;
+}
+
+/*
+The content `<div>` is where all your content goes.
+*/
+.content {
+    margin: 40px 0 0 0;
+    padding: 0 2em;
+    max-width: 600px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+.content h1 a {
+    color: inherit;
+    text-decoration: none;
+    color: #555;
+}
+
+#menu {
+    margin-top: 40px;
+    margin-left: -230px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px 20px 0 20px;
+}
+
+#menu .section-header {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight:500;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+#menu li {
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+}
+
+ul#main-nav li.active, ul#main-nav li:hover {
+    list-style-type: disc;
+}
+
+ul#main-nav li a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul#main-nav li a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background: #efefef;
+    position: absolute;
+    width: 100%;
+    padding: 15px 0 15px 40px;
+}
+
+.social {
+    display: block;
+}
+
+.social div {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.social div a {
+    font-size: 0.875rem;
+    color: #0b0b0b;
+}
+
+.social div a:hover {
+    text-decoration: underline;
+}
+
+a.changelog {
+    color: #00f;
+}
+
+a.changelog:hover {
+    color: #333;
+}
+
+p.copyright {
+    font-size: 0.875rem;
+}
+
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+/*
+The button to open/close the Menu is custom-made and not part of Pure. Here's
+how it works:
+*/
+
+/*
+`.menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menu-link {
+    position: fixed;
+    display: block; /* show this only on small screens */
+    top: 0;
+    left: 0; /* "#menu width" */
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    background: #000;
+}
+
+.menu-link span {
+    position: relative;
+    display: block;
+}
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2em;
+}
+
+.menu-link span:before,
+.menu-link span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
+
+.menu-link span:after {
+    margin-top: 0.6em;
+}
+
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+
+    .header,
+    .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #layout {
+        padding-left: 250px; /* left col width "#menu" */
+        left: 0;
+    }
+    #menu {
+        left: 250px;
+    }
+
+    .menu-link {
+        position: fixed;
+        left: 250px;
+        display: none;
+    }
+
+    #layout.active .menu-link {
+        left: 250px;
+    }
+}
+
+@media (max-width: 48em) {
+    /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    #layout.active {
+        position: relative;
+        left: 250px;
+    }
+}
+
+/* -- Utitilities ------------------------------------- */
+
+.mt-3 {
+    margin-top: 3rem !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.header-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-link a:hover {
+    text-decoration: underline;
+}

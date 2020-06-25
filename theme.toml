@@ -1,0 +1,11 @@
+name = "Blank"
+license = "MIT"
+licenselink = "https://github.com/joashxu/blank/blob/master/LICENSE"
+description = "Hugo template for enzircle.com."
+homepage = "https://github.com/joashxu/blank"
+features = ["blog"]
+min_version = "0.20"
+
+[author]
+  name = "joashxu"
+  homepage = "https://github.com/joashxu"

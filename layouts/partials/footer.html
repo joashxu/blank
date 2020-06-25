@@ -1,0 +1,13 @@
+<footer>
+	<div class="footer-container">
+		<div class="social">
+			{{ range .Site.Params.social }}
+			<div>
+				<a href="{{ .url }}" class="san-serif">{{ .title }}</a>
+			</div>
+			{{ end }}
+		</div>
+
+		<p class="san-serif copyright">&copy; {{ .Site.Title }} {{ now.Year }} </p>
+	</div>
+</footer>

@@ -1,0 +1,35 @@
+{{ define "main" }}
+	<main>
+		<p class="san-serif section-header">Latest Post</p>
+		{{ range first 1 .Pages.ByPublishDate.Reverse }}
+		<article>
+			<div>
+				<h1 class="san-serif mb-0"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+				<p class="post-info san-serif">
+					{{ .FuzzyWordCount }} Words, {{ .ReadingTime }} minutes read, Published on {{ .PublishDate.Format "2 January 2006" }}
+				</p>
+
+				<p>{{ .Summary }}</p>
+			</div>
+
+			{{ if .Truncated }}
+			<div>
+				<a href="{{ .RelPermalink }}">Continue Reading →</a>
+			</div>
+			{{ end }}
+		</article>
+		{{ end}}
+
+		<p class="san-serif section-header mt-3">Recent Posts</p>
+		{{ range first 3 (after 1 .Pages.ByPublishDate.Reverse) }}
+		<article>
+			<div>
+				<h2 class="san-serif mb-0 header-link"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+				<p class="post-info san-serif">
+					{{ .FuzzyWordCount }} Words, Approximately {{ .ReadingTime }} minutes read, Published on {{ .PublishDate.Format "2 January 2006" }}
+				</p>
+			</div>
+		</article>
+		{{ end}}
+	</main>
+{{ end }}

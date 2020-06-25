@@ -1,0 +1,14 @@
+{{ define "main" }}
+	<main>
+		{{ range $.Site.RegularPages.ByPublishDate.Reverse }}
+		<article>
+			<div>
+				<h2 class="san-serif mb-0 header-link"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+				<p class="post-info san-serif">
+					{{ .FuzzyWordCount }} Words, Approximately {{ .ReadingTime }} minutes read, Published on {{ .PublishDate.Format "2 January 2006" }}
+				</p>
+			</div>
+		</article>
+		{{ end }}
+	</main>
+{{ end }}
