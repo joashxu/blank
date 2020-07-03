@@ -184,12 +184,12 @@ This is the parent `<div>` that contains the menu and the content area.
 }
 
 #layout.active #menu {
-    left: 250px;
-    width: 250px;
+    left: 260px;
+    width: 260px;
 }
 
 #layout.active .menu-link {
-    left: 250px;
+    left: 260px;
 }
 
 /*
@@ -208,9 +208,13 @@ The content `<div>` is where all your content goes.
     color: #555;
 }
 
+.web-title {
+    margin-top: 0.5rem !important;
+}
+
 #menu {
-    margin-top: 40px;
-    margin-left: -230px;
+    margin-top: 0;
+    margin-left: -250px;
     width: 250px;
     position: fixed;
     top: 0;
@@ -219,6 +223,10 @@ The content `<div>` is where all your content goes.
     z-index: 1000;
     overflow-y: auto;
     padding: 20px 20px 0 20px;
+}
+
+#menu div.logo {
+    width: 50%;
 }
 
 #menu .section-header {
@@ -238,6 +246,11 @@ The content `<div>` is where all your content goes.
 #menu li {
     font-size: 1.0625rem;
     line-height: 1.5rem;
+    margin-bottom: 5px;
+}
+
+ul#main-nav li {
+    margin-bottom: 0;
 }
 
 ul#main-nav li.active, ul#main-nav li:hover {
@@ -246,12 +259,16 @@ ul#main-nav li.active, ul#main-nav li:hover {
 
 ul#main-nav li a {
     color: inherit;
-    font-weight: bold;
     text-decoration: none;
 }
 
 ul#main-nav li a:hover {
     text-decoration: none;
+    font-weight: bold;
+}
+
+ul#main-nav li.active a {
+    font-weight: bold;
 }
 
 footer, .push {
@@ -362,21 +379,21 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: 250px; /* left col width "#menu" */
+        padding-left: 260px; /* left col width "#menu" */
         left: 0;
     }
     #menu {
-        left: 250px;
+        left: 260px;
     }
 
     .menu-link {
         position: fixed;
-        left: 250px;
+        left: 260px;
         display: none;
     }
 
     #layout.active .menu-link {
-        left: 250px;
+        left: 260px;
     }
 }
 
@@ -389,7 +406,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     */
     #layout.active {
         position: relative;
-        left: 250px;
+        left: 260px;
     }
 }
 
