@@ -7,6 +7,44 @@
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	<!-- For old IEs -->
+	<link rel="shortcut icon" href='{{ "icon/favicon.ico" | absURL }}' />
+
+	<!-- For new browsers - multisize ico  -->
+	<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href='{{ "icon/favicon.ico" | absURL }}'>
+
+	<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+	<link rel="apple-touch-icon" sizes="152x152" href='{{ "icon/favicon-152-precomposed.png" | absURL }}'>
+
+	<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+	<link rel="apple-touch-icon" sizes="144x144" href='{{ "icon/favicon-144-precomposed.png" | absURL }}'>
+
+	<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+	<link rel="apple-touch-icon" sizes="120x120" href='{{ "icon/favicon-120-precomposed.png" | absURL }}'>
+
+	<!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+	<link rel="apple-touch-icon" sizes="114x114" href='{{ "icon/favicon-114-precomposed.png" | absURL }}'>
+
+	<!-- For iPhone 6+ -->
+	<link rel="apple-touch-icon" sizes="180x180" href='{{ "icon/favicon-180-precomposed.png" | absURL }}'>
+
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon" sizes="72x72" href='{{ "icon/favicon-72-precomposed.png" | absURL }}'>
+
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon" sizes="57x57" href='{{ "icon/favicon-57.png" | absURL }}'>
+
+	<!-- For Old Chrome -->
+	<link rel="icon" sizes="32x32" href='{{ "icon/favicon-32.png" | absURL }}'>
+
+	<!-- For IE10 Metro -->
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content='{{ "icon/favicon-144.png" | absURL }}'>
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Chrome for Android -->
+	<link rel="manifest" href="manifest.json">
+	<link rel="icon" sizes="192x192" href='{{ "icon/favicon-192.png" | absURL }}'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Muli:400" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
