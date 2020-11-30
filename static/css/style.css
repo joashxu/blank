@@ -85,6 +85,11 @@ dl, ul, ol {
     margin-bottom: 0.75rem;
 }
 
+ol ul > li,
+ol ol > li {
+    margin-left: 1.1rem;
+}
+
 code.has-jax {
     font: inherit;
     font-size: 100%;
@@ -116,6 +121,19 @@ h1 {
     font-size: 2.5rem;
     line-height: 3rem;
 }
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
 
 h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
@@ -374,7 +392,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
     .header,
     .content {
-        padding-left: 2em;
+        padding-left: 4em;
         padding-right: 2em;
     }
 
