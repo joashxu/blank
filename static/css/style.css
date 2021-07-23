@@ -65,6 +65,10 @@ code, code > span {
     font-family: 'Source Code Pro', monospace;
 }
 
+.chroma {
+    overflow-x: scroll;
+}
+
 a {
     color: #326891;
 }
@@ -77,7 +81,7 @@ p {
     margin-bottom: 0.75rem;
     margin-right: 20px;
     width: calc(100% - 40px);
-    max-width: 600px;
+    max-width: 700px;
 }
 
 dl, ul, ol {
@@ -217,7 +221,7 @@ The content `<div>` is where all your content goes.
 .content {
     margin: 40px 0 0 0;
     padding: 0 2em;
-    max-width: 600px;
+    max-width: 700px;
     margin-bottom: 50px;
     line-height: 1.6em;
 }
