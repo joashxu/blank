@@ -91,7 +91,8 @@ dl, ul, ol {
 
 ol ul > li,
 ol ol > li,
-ul ul > li {
+ul ul > li,
+ul ol > li {
     margin-left: 1.1rem;
 }
 
@@ -298,9 +299,10 @@ footer, .push {
     height: 50px;
 }
 
-footer{
-    background: #efefef;
-    padding: 15px 0 15px 40px;
+footer {
+    position: absolute;
+    bottom: 1rem;
+    width: 260px;
 }
 
 .social {

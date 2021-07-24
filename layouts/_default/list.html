@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<main>
-		{{ range $.Site.RegularPages.ByPublishDate.Reverse }}
+		{{ range $i, $e := where (.Site.RegularPages.ByPublishDate.Reverse) "Section" "!=" "projects" }}
 		<article>
 			<div>
 				<h2 class="san-serif mb-0 header-link"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

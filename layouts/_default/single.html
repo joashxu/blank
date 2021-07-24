@@ -4,4 +4,7 @@
 		<p class="post-info san-serif">{{ .FuzzyWordCount }} Words, {{ .ReadingTime }} minutes read, Published on {{ .PublishDate.Format "2 January 2006" }}</p>
 		{{ .Content }}
 	</main>
+
+{{ partial "related" . }}
 {{ end }}
+

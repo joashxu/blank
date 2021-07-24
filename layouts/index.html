@@ -1,7 +1,7 @@
 {{ define "main" }}
 	<main>
 		<p class="san-serif section-header">Latest Post</p>
-		{{ range first 1 .Pages.ByPublishDate.Reverse }}
+		{{ range first 1 (where (.Site.RegularPages.ByPublishDate.Reverse) "Section" "!=" "projects")}}
 		<article>
 			<div>
 				<h1 class="san-serif mb-0"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
@@ -20,8 +20,8 @@
 		</article>
 		{{ end}}
 
-		<p class="san-serif section-header mt-3">Recent Posts</p>
-		{{ range first 3 (after 1 .Pages.ByPublishDate.Reverse) }}
+		<p class="san-serif section-header mt-3">Older Posts</p>
+		{{ range first 5 (after 1 .Site.RegularPages.ByPublishDate.Reverse) }}
 		<article>
 			<div>
 				<h2 class="san-serif mb-0 header-link"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
